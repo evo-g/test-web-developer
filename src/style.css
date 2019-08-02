@@ -81,6 +81,7 @@ hr {
 .content {
   grid-column: 2/4;
   padding: 2rem;
+  margin-right: 3rem;
   border-bottom: 4px solid #CFCFCF;
   border-right: 1px solid #CFCFCF;
   border-left: 1px solid #CFCFCF;
@@ -150,6 +151,7 @@ hr {
   color: #ffffff;
   font-size: 1.2em;
   margin: .1rem 0;
+  font-style: normal;
 }
 
 #image:hover .image-container img  {
@@ -163,11 +165,18 @@ hr {
 
 .dropdown-button {
   background-color: #E4E2E3;
+  margin: 0 2rem;
   border-radius: 1rem;
   width: 75%;
   height: 3rem;
   text-align: start;
   border-style: none;
+  outline: none;
+}
+
+
+.active {
+  background-color: #E4E2E3;
 }
 
 .dropdown-container {
