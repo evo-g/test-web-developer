@@ -99,6 +99,10 @@ hr {
   font-style: italic;
 }
 
+.content p {
+  line-height: 2em;
+}
+
 #images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -163,17 +167,39 @@ hr {
   background-color: #00a7e094;
 }
 
+.subnav {
+  position: relative;
+  width: 75%;
+}
+
+.related-links {
+  position: relative;
+  width: 75%;
+}
+
 .dropdown-button {
   background-color: #E4E2E3;
   margin: 0 2rem;
   border-radius: 1rem;
-  width: 75%;
+  width: 100%;
   height: 3rem;
   text-align: start;
   border-style: none;
   outline: none;
 }
 
+.down-arrow {
+  position: absolute;
+	border-color: #E4E2E3 transparent;
+	border-style: solid;
+  border-width: 7px 7px 0px 7px;
+  top: 3rem;
+  right: 1rem;
+	height: 0px;
+  width: 0px;
+  display: flex;
+  justify-content: flex-end;
+}
 
 .active {
   background-color: #E4E2E3;
@@ -182,14 +208,20 @@ hr {
 .dropdown-container {
   font-size: 1.2em;
 }
-.dropdown-container ul li {
+.remove-style li {
   list-style: none;
+  height: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
 }
-.dropdown-container ul li::before {
-  content: "•"; color: #00a7e0;
+.remove-style li::before {
+  content: "•"; 
+  color: #00a7e0;
+  font-size: 2.5em;
+  text-align: center;
   width: 1em;
-  height: 2em;
-  display: inline-block;
 }
 
 @media (min-width: 37.5rem) {

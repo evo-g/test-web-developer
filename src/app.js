@@ -17,8 +17,6 @@ const images = {
 	}
 };
 
-// console.log(images);
-
 // const images = [
 //  man = {
 //    heading: 'Man Image',
@@ -106,17 +104,17 @@ function getMiddleHoverElements({ description, heading }, imagesWrapper) {
 };
 
 function toggleDropdown() {
-	const dropdown = document.getElementsByClassName("dropdown-button");
+	const dropdown = document.getElementsByClassName('dropdown-button');
 	let i;
 	
 	for (i = 0; i < dropdown.length; i++) {
-		dropdown[i].addEventListener("click", function () {
-			this.classList.toggle("active");
+		dropdown[i].addEventListener('click', function () {
+			this.classList.toggle('active');
 			var dropdownContent = this.nextElementSibling;
-			if (dropdownContent.style.display === "block") {
-				dropdownContent.style.display = "none";
+			if (dropdownContent.style.display === 'block') {
+				dropdownContent.style.display = 'none';
 			} else {
-				dropdownContent.style.display = "block";
+				dropdownContent.style.display = 'block';
 			}
 		});
 	}
