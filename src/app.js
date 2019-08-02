@@ -37,7 +37,7 @@ const images = {
 //  }
 // ];
 
-// const getImgs = images = images.forEach(({
+// const getImgs = images = images.map(({
 //  heading, description, path
 // }) => {
 //  heading,
@@ -51,29 +51,35 @@ const createImageElement = ({ heading, description, path }) => {
   imageElement.setAttribute('alt', description);
   imageElement.setAttribute('title', heading);
   return imageElement;
-}
+};
 
 const createImageContainerDivElement = () => {
   const imageContainer = document.createElement('div');
   imageContainer.setAttribute('class', 'image-container');
   return imageContainer
-}
+};
+
+const createTextContainerDivElement = () => {
+	const textWrapper = document.createElement('div');
+	textWrapper.setAttribute('class', 'middle-display');
+  return textWrapper
+};
 
 const createH1Element = ({ heading }) => {
   const h1Element = document.createElement('h1');
   h1Element.innerHTML = heading;
   return h1Element
-}
+};
 
 const createH2Element = ({ description }) => {
   const h2Element = document.createElement('h2');
   h2Element.innerHTML = description;
   return h2Element
-}
+};
 
 const addElementToParent = (element, parent) => {
   parent.appendChild(element)
-}
+};
 
 function getAppendedElements() {
   let newImageObj = Object.values(images).map(image => {
@@ -84,25 +90,19 @@ function getAppendedElements() {
 
     addElementToParent(containerElement, imagesWrapper);
     addElementToParent(imageElement, containerElement);
-
     getMiddleHoverElements(image, containerElement)
 	});
   return newImageObj
-}
-
-
+};
 
 function getMiddleHoverElements({ description, heading }, imagesWrapper) {
-    
-    const textWrapper = document.createElement('div');
-    textWrapper.setAttribute('class', 'middle-display');
+		const textContainer = createTextContainerDivElement();
     const h1Element = createH1Element({heading});
     const h2Element = createH2Element({description});
-    // console.log(textWrapper)
 
-    addElementToParent(textWrapper, imagesWrapper)
-    addElementToParent(h1Element, textWrapper)
-    addElementToParent(h2Element, textWrapper)
-}
+    addElementToParent(textContainer, imagesWrapper);
+    addElementToParent(h1Element, textContainer);
+    addElementToParent(h2Element, textContainer);
+};
 
-document.addEventListener('load', getAppendedElements())
+document.addEventListener('load', getAppendedElements());
