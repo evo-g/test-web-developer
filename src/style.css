@@ -44,6 +44,11 @@ nav {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  color: #323F48;
+}
+
+.logo {
+  margin: 0 0 0 -2rem;
 }
 
 hr {
@@ -101,6 +106,7 @@ hr {
 
 .content p {
   line-height: 2em;
+  color: #656E75;
 }
 
 #images {

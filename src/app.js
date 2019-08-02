@@ -103,22 +103,24 @@ function getMiddleHoverElements({ description, heading }, imagesWrapper) {
 	addElementToParent(h2Element, textContainer);
 };
 
-function toggleDropdown() {
-	const dropdown = document.getElementsByClassName('dropdown-button');
-	let i;
+// function toggleDropdown() {
+// 	const dropdown = document.getElementsByClassName('dropdown-button');
+// 	let i;
 	
-	for (i = 0; i < dropdown.length; i++) {
-		dropdown[i].addEventListener('click', function () {
-			this.classList.toggle('active');
-			var dropdownContent = this.nextElementSibling;
-			if (dropdownContent.style.display === 'block') {
-				dropdownContent.style.display = 'none';
-			} else {
-				dropdownContent.style.display = 'block';
-			}
-		});
-	}
-}
+// 	for (i = 0; i < dropdown.length; i++) {
+// 		dropdown[i].addEventListener('click', function () {
+// 			this.classList.toggle('active');
+// 			var dropdownContent = this.nextElementSibling;
+// 			if (dropdownContent.style.display === 'block') {
+// 				dropdownContent.style.display = 'none';
+// 			} else {
+// 				dropdownContent.style.display = 'block';
+// 			}
+// 		});
+// 	}
+// 	// a bit glitchy on page have to click button twice to get it going, needed a bit more time to correct issue. 
+//  // my first attempt at dropdown menu so got code from w3 schools
+// };
 
 document.addEventListener('load', getAppendedElements());
-document.addEventListener('load', toggleDropdown());
+// document.addEventListener('load', toggleDropdown());
